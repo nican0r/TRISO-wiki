@@ -1,0 +1,6 @@
+# Originals and page renders are large binaries; keep them on disk, out of git.
+raw/pdf/*
+!raw/pdf/.gitkeep
+raw/figures/*
+!raw/figures/.gitkeep
+.DS_Store
