@@ -67,7 +67,7 @@ updated: 2026-08-25
 
 1. **Every number carries a source and a page.** No unsourced quantity appears anywhere in this wiki. Format: `950 °C ([[Source Title]] p.34)`. If a number cannot be traced, it does not go in.
 2. **Cite page numbers from the `<!-- page N -->` markers** the converter writes into `raw/md/`. Verify against the PDF when a number matters.
-3. **Reference tone.** Neutral, dense, written for lookup — not lecture notes, not bullet-fragment study material. Study material, flashcards, and Marp decks are generated on request *from* the wiki; they are not what the wiki is.
+3. **Reference tone.** Neutral, dense, written for lookup — not lecture notes, not bullet-fragment study material. Study material, flashcards, and Marp decks are generated on request *from* the wiki; they are not what the wiki is. Dense means brief — see rule 12.
 4. **Units: SI, explicit.** °C, MWth vs MWe distinguished, %FIMA for burnup, barns for cross sections, µm for particle dimensions. Converted values keep the original in parentheses.
 5. **Never silently resolve a conflict.** When sources disagree, both claims stay, in a callout, on the relevant page:
    ```
@@ -76,10 +76,22 @@ updated: 2026-08-25
    ```
    Tag the page `#conflict` so a Dataview query can list every open disagreement.
 6. **Mark soft claims.** Vendor figures, pre-prints, extrapolations, and single-source claims are labelled as such rather than stated flat.
+6a. **Mark wiki inferences.** A conclusion derived here rather than stated in a source — reconciling two figures, deriving a value, inferring a mechanism — goes in a `> [!info]` callout tagged `#inferred`, naming what it was derived from and what would confirm it. Never let an inference read as a source statement. A resolved inference stops carrying `#conflict`; `#conflict` means an open disagreement, `#inferred` means a filled gap.
 7. **Equations in `$…$` and `$$…$$`.** Renders natively in Obsidian.
 8. **Link everything linkable.** A page that mentions a concept with its own page must `[[link]]` it, and the target page's Sources or Related section links back. This bookkeeping is your job.
 9. **Promotion rule.** A concept gets its own page when it draws on 2+ sources or is genuinely load-bearing. Below that it lives as a section on a parent page. Prefer few substantial pages over many thin ones.
-10. **Valar framing is confined to `valar/`.** Concept pages discuss implications for HTGRs generally; the Valar-specific reading lives in `valar/` pages that link out to the concepts. Do not add "relevance to Valar" sections to concept pages.
+10. **Skip history that does not explain function.** Programme chronologies, which country built what and when, and design decisions justified by a specific historical reactor are out of scope. Historical material stays only where it explains how fuel or an HTGR *works* or establishes a present-day standard — German coating parameters and matrix chemistry are kept, because they define the reference process; the operating history of the AVR or THTR is not, unless a specific result is the evidence for a mechanism. When a historical fact is the only evidence for a technical claim, keep the claim and cite the evidence in one clause, not the narrative.
+11. **Define acronyms on first use.** Any acronym that is not universally standard gets expanded the first time it appears on a page — `%FIMA` (fissions per initial metal atom), `IPyC` (inner pyrocarbon), `KÜFA` (Cold Finger Apparatus) — or is wikilinked to a page that defines it. First use is *per page*, not per wiki: a reader arriving at a concept page from a search should not have to open another page to parse the first paragraph. Expand once, then use the acronym freely for the rest of the page.
+    Chemical formulae and unit symbols are exempt (UO₂, SiC, MPa, °C). Domain terms a nuclear engineer would not pause on are exempt (LWR, HTGR, TRISO). When in doubt, expand — it costs four words.
+    **Watch for collisions.** In this source alone, `AGR` means both the British Advanced Gas Reactor line ([[Ch 01 — Introduction]] p.12) and the US Advanced Gas Reactor fuel development programme ([[Ch 05 — Fabrication of Fuel Compacts]] p.51). Where an acronym is ambiguous, disambiguate rather than expand — "the US AGR fuel programme" — and say so once on the page.
+12. **Brevity is the default; length must be earned.** Write the minimum that carries the claim and its citation. Concretely:
+    - **Do not restate what another page already establishes.** Link it. A concept page that re-explains the TRISO layer stack instead of linking [[TRISO Particle Architecture]] is duplicating maintenance, and the two copies will drift.
+    - **Prefer a table to prose** for anything with more than two parallel values. Prefer one sentence with a number and a page over three sentences of context around it.
+    - **Cut the connective tissue.** No restating the section heading in the first line, no "it is worth noting that", no closing summary of what was just said.
+    - **One idea per section.** If a section has grown past roughly 150 words, either it contains two ideas that want splitting, or it contains restatement that wants deleting.
+    - **A gist is 3–5 sentences and stays that way.** Findings go under headings, not in the gist.
+    Density and brevity are the same requirement, not opposites: a dense page says more per word, which means fewer words for the same content. Cut until removing the next word would remove a fact or a citation.
+13. **Valar framing is confined to `valar/`.** Concept pages discuss implications for HTGRs generally; the Valar-specific reading lives in `valar/` pages that link out to the concepts. Do not add "relevance to Valar" sections to concept pages.
 
 ## Page templates
 
@@ -171,7 +183,7 @@ Read `index.md` first, then drill into the pages it points to. Answer with citat
 
 ### Lint — every 5–10 sources
 
-Sweep for: contradictions between pages, claims superseded by newer sources, orphan pages, concepts referenced repeatedly with no page of their own, missing back-links, `status: stub` pages that never grew, `data/` tables with holes a specific paper would fill. Output a punch list for approval, plus suggested next sources to look for. Do not act on it unilaterally.
+Sweep for: contradictions between pages, claims superseded by newer sources, orphan pages, concepts referenced repeatedly with no page of their own, missing back-links, `status: stub` pages that never grew, `data/` tables with holes a specific paper would fill, **unexpanded acronyms on first use (rule 11)**, **sections past ~150 words and passages restating what another page already says (rule 12)**. Output a punch list for approval, plus suggested next sources to look for. Do not act on it unilaterally.
 
 ## index.md and log.md
 

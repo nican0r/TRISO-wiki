@@ -4,3 +4,9 @@ raw/pdf/*
 raw/figures/*
 !raw/figures/.gitkeep
 .DS_Store
+
+# Figures extracted by marker live beside the converted markdown; keep them
+# on disk, out of git (the PDF is the source of truth).
+raw/md/**/*.jpeg
+raw/md/**/*.jpg
+raw/md/**/*.png
