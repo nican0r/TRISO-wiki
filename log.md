@@ -2,7 +2,7 @@
 type: synthesis
 title: Log
 status: draft
-updated: 2026-08-25
+updated: 2026-10-11
 ---
 
 # Log
@@ -55,3 +55,4 @@ updated: 26 pages — acronym expansions, AGR disambiguation, section splits, re
 notes: ACRONYMS — 0 unexpanded remaining, from 60+ at start; ~70 expansions placed at first prose use per page, skipping tables, headings and figure captions, with a repair pass for insertions that landed inside existing parentheses or callouts, and a final pass adding italic lead-in lines where an acronym appears only inside a table. AGR COLLISION — the automated pass wrote "the Magnox/US Advanced Gas Reactor lineage" into Ch 01, where AGR is the BRITISH Advanced Gas-cooled Reactor; caught and corrected, and Ch 01 now carries an explicit note that the document uses AGR in two senses. This is the failure mode rule 11 warns about and it was worth the rule.
 BREVITY — the three worst sections were split rather than cut, since their length came from enumeration not padding: Ch 08 "The mechanisms" (861w) into ten per-mechanism subsections, Fuel Qualification "Four constraints" (547w) into four, Ch 06 "Key findings" (537w) into three. Restatement was cut from two concept pages that were re-explaining what chapter pages own — Fission Product Retention's per-species hierarchy now links to Ch 09 rather than repeating it, TRISO Fuel Failure Mechanisms' eleven-mode walkthrough became a three-group classification table linking to Ch 08. Ch 04 lost its thermo-reflectance instrument build detail, Ch 07 its fission-product-monitoring hardware detail, and the questions page's eight-step process became a table pointing at Ch 07.
 NET WORDS UNCHANGED (25,547 to 25,710): acronym expansions added roughly what the brevity cuts removed. The measurable gains are structural — longest section 861w to 282w, sections over 150 words 44 to 43 but with the tail cut off, and no page now re-explains a concept another page owns. 43 sections remain over 150 words; inspected, and they are dense tables-plus-prose where cutting would remove facts or citations, not padding. Backup of pre-lint state: ~/wiki-backup-pre-lint.tar.gz (session home, outside the vault).
+
