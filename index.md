@@ -2,7 +2,7 @@
 type: synthesis
 title: Index
 status: draft
-updated: 2026-10-11
+updated: 2026-10-14
 ---
 
 # Index
@@ -60,6 +60,7 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 ## Questions
 
 - [[How are fuel compacts irradiated in qualification testing]] — capsule process, acceleration limits and spectrum selection; intra-compact flux distribution identified as a gap · 1 source — `draft`
+- [[Why does the inner PyC layer shrink during irradiation]] — macroscopic shrink-then-swell behaviour and its structural role; the crystallite-level mechanism is not in the ingested sources · 2 sources — `draft`
 
 ## Valar
 
