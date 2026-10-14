@@ -2,9 +2,9 @@
 type: concept
 title: Fuel Quality Control and Characterization
 status: draft
-sources: 1
-tags: [qa-qc, metrology, defect-fraction, anisotropy, burn-leach]
-updated: 2026-08-25
+sources: 6
+tags: [qa-qc, metrology, defect-fraction, anisotropy, burn-leach, inferred]
+updated: 2026-10-11
 ---
 
 # Fuel Quality Control and Characterization
@@ -67,8 +67,25 @@ Sample size is set by binomial statistics, and it is large: **~200,000 particles
 
 The chapter is explicit that among the errors present in evaluating a material, "sampling [is] perhaps the most critical" ([[Ch 04 — QA-QC and Characterization]] p.39). Test methods are validated per material, uncertainty is quantified statistically, confidence levels are set so residual failure probability can be quantified and accepted in the design, and manufacturing is steered by trend analysis rather than by pass/fail on individual lots. The framework standard named is ASME NQA-1 (p.38).
 
+SiC density is harder to measure than the table suggests. Titration misreads SiC deposited near 1450 °C, because that layer has an interconnected open pore network. Density-gradient-column studies rarely document their method. Some compiled SiC densities even exceed the theoretical maximum ([[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] pp.12–13). Density figures from different labs can therefore carry systematic offsets.
+
 A second-order version of the same point: the buffer density derivation amplifies the relative standard deviation of kernel density about sixfold, which sets a hard accuracy requirement on kernel density measurement that has nothing to do with kernels (p.42).
+
+Acceptance is judged on batch means, and not every property is measured on the batch itself. On an ORNL (Oak Ridge National Laboratory) surrogate batch, IPyC density could not be measured because the IPyC would not separate from the buffer, and buffer density was taken from an earlier buffer-only run under the same conditions ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] pp.7–8).
+
+> [!info] Inferred — a passing mean over a split population
+> The same batch passed OPyC density at 1.8937 g/cm³ against 1.90 ± 0.05 (p.8). Its data form shows 6 of 29 fragments at 1.824–1.830 g/cm³, below the lower limit, and the rest at 1.900–1.926 (p.29). The report does not comment. A second density population in the layer and a fragment-preparation artefact are both possible; a repeat measurement would tell them apart.
+> `#inferred`
+
+## Coating itself is controlled blind
+
+The CVD (chemical vapor deposition) step that produces the layers measured above is run without any internal view of the bed: no sight ports, no internal thermocouples (a top-hung probe's radial position can't be controlled, and the radial temperature profile makes a single internal reading unreliable anyway), no optical pyrometry (blocked by opaque smoke during pyrocarbon deposition). Temperature is held by external, wall-offset thermocouples and gas-flow parameters alone, and the result is checked only after the run ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.5). Bed pressure drop is already available on hot coaters and its fluctuations track spouting regime in cold mockups ([[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating|Zhou et al. 2005]] pp.2, 12). A further external alternative has been proposed: gamma-ray densitometry, a source and detector outside the vessel, identified spouting regime transitions in cold flow to within 3.4 % of pressure-fluctuation measurements ([[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques|Biswas & Al-Dahhan 2012]] pp.5, 20) — not demonstrated on a hot coater. Not every coater works this way: ORNL's development coater reads bed temperature by optical pyrometer through a top sight glass ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.5). This is the other half of why measurement carries so much weight here: the safety case rests on defect fractions rather than in-service margins, and the fabrication step producing those defects cannot be observed while it happens. See [[TRISO Coating Reactor Design]].
 
 ## Sources
 
 - [[Ch 04 — QA-QC and Characterization]] · [[Ch 05 — Fabrication of Fuel Compacts]] · [[Ch 02 — Manufacture of TRISO Coated Particles]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]
+- [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]]
+- [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
+- [[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating]]
+- [[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques]]
