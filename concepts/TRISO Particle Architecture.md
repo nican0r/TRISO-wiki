@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Particle Architecture
 status: draft
-sources: 1
+sources: 5
 tags: [triso, sic, pyc, buffer, particle-design]
-updated: 2026-08-25
+updated: 2026-09-23
 ---
 
 # TRISO Particle Architecture
@@ -22,6 +22,8 @@ updated: 2026-08-25
 | OPyC | dense isotropic PyC | gaseous fission product barrier; reduces tensile stress on SiC; bonding surface for matrix or overcoating | 40 µm |
 
 Functions from [[Ch 01 — Introduction]] p.22; thicknesses are the reference German LEU (low-enriched uranium) UO₂ design, [[Ch 02 — Manufacture of TRISO Coated Particles]] p.34. Overall particle diameter 500–1000 µm; typical enrichment 8–20%, set by power rating and safety considerations ([[Ch 01 — Introduction]] p.18).
+
+A second reference design — a US HEU (highly-enriched uranium)-licensed production line, 425 µm kernel — gives a slightly thicker buffer layer (100 µm) than the German LEU reference above (95 µm); the other three layer thicknesses match exactly ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.5). A third line — INET (Institute of Nuclear and New Energy Technology, Tsinghua), 500 µm UO₂ kernel — uses the German thicknesses exactly, giving a 920 µm coated particle ([[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] pp.2, 5). A review gives the buffer as ~100 µm at ~1.1 g/cm³ ([[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] p.2). The AGR-1 (US Advanced Gas Reactor programme) specification sets 40 ± 4 / 35 ± 3 / 40 ± 4 µm for IPyC/SiC/OPyC; an ORNL surrogate line cut the buffer target from 100 to 90 ± 15 µm ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.8). The same report notes a weak buffer/IPyC interface is desirable, so the buffer can debond without tearing the IPyC under irradiation; a thin low-density outer buffer band made for this purpose was tried and dropped (p.11). See [[TRISO Coating Reactor Design]] for the dimensional progression through coating and [[TRISO Coating Parameters]] for all four lines side by side.
 
 ## Why the layering works
 
@@ -54,3 +56,7 @@ A typical HTGR core contains **more than 10⁹ coated particles** ([[Ch 01 — I
 ## Sources
 
 - [[Ch 01 — Introduction]] · [[Ch 02 — Manufacture of TRISO Coated Particles]] · [[Ch 08 — Fuel Failure Mechanisms]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]
+- [[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]]
+- [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]] · SiC growth: [[SiC Layer Deposition]]
+- [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]

@@ -2,9 +2,9 @@
 type: concept
 title: Silver Release
 status: draft
-sources: 1
-tags: [triso, fission-product-release, silver, maintenance, direct-cycle]
-updated: 2026-08-25
+sources: 2
+tags: [triso, fission-product-release, silver, maintenance, direct-cycle, conflict]
+updated: 2026-09-22
 ---
 
 # Silver Release
@@ -42,6 +42,13 @@ Note that even in the zero-failure 1600 °C tests, silver release is measurable 
 
 Silver breaks the otherwise clean story that fission products stay inside the particle until the accident threshold. It escapes during **normal operation**, at temperatures a high-outlet-temperature design deliberately runs at, through coatings that are working as designed. A design targeting outlet temperatures above 900 °C is by construction operating in the regime where this occurs.
 
+## Contested / uncertain
+
+> [!warning] Conflict — does fine-grained SiC help or hurt?
+> Finer-grained SiC gave better fission product retention in Petti et al. (2003) but higher silver release at elevated temperature in Gerczak et al. (2016). Both are cited second-hand in [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] p.2, which does not resolve them. It nonetheless recommends argon dilution "to produce fine-grain SiC to prevent fission product migration" (p.17). Fine grains are also a SiC acceptance criterion ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.34). How deposition sets grain size: [[SiC Layer Deposition]]. Unresolved; the primary papers are not in the wiki.
+> `#conflict`
+
 ## Sources
 
 - [[Ch 08 — Fuel Failure Mechanisms]] · [[Ch 09 — Accident Testing]] — both from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]]
