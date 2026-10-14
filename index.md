@@ -27,6 +27,9 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]] — Jolly et al., ORNL/LTR-2016/315 (2016), 31 pp. Surrogate TRISO on 800 µm ZrO₂: full per-layer gas flows, bed-measured temperatures, SiC at 1425 °C in Ar–H₂, AGR-1 tolerances, layer-separation problems on large kernels — `draft`
 - [[Introduction to Fluidization]] — Cocco, Karri, Knowlton (PSRI), CEP (2014), 9 pp. General chemical-engineering tutorial: minimum fluidisation velocity, two-phase theory, regimes, Geldart groups, distributor ΔP rules, attrition, entrainment; not coater-specific — `draft`
 - [[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques]] — Biswas & Al-Dahhan, DOE-NERI DE-FC07-07ID14822 (2012), 142 pp. Cold-flow spouted-bed scale-up: matched dimensionless groups fail locally, gas-holdup-profile similarity proposed; gamma densitometry regime monitoring; two-fluid CFD; TRISO tasks unfinished; many internal inconsistencies — `draft`
+- [[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed]] — Lowden et al., ORNL/TM-2005/533 (2005), 35 pp. 17-run two-factor IPyC study: temperature sets density and chlorine permeability, coating gas fraction sets rate and open porosity, anisotropy follows neither — `draft`
+- [[FY 2008 Six-Inch Diameter Coater Test Report]] — Barnes & Marshall, INL/EXT-08-14633 (2008), 53 pp. Production-scale coater: control vs bed temperature quantified, MTS limit for SiC density, argon variant selection, 400 Hz pressure fluctuations correlated with anisotropy and aspect ratio — `draft`
+- [[PIE on Five Irradiated AGR-1 Compacts]] — Hunn et al., ORNL/TM-2012/397 (2012), 31 pp. Post-irradiation examination: release through intact SiC, a coater-soot particle that failed at 1600 °C, silver varying particle to particle, variant comparison — `draft`
 - [[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating]] — Zhou et al., Univ. Tennessee / ORNL (~2005), 19 pp. 5 cm cold mockup with 300–650 µm ZrO₂: u_mf follows Wen–Yu, U_ms correlation and ΔP-minimum method, stable spouting 1.0–1.9 U_ms, ΔP spectral regime signature; Eq. 2 unusable; Geldart B conflict — `draft`
 
 ## Concepts
@@ -43,6 +46,8 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 - [[Fuel Qualification Irradiation Testing]] — four compromises of irradiation testing; R/B timing identifies the culprit · 1 source — `draft`
 - [[Fuel Quality Control and Characterization]] — each test maps to a failure mechanism; sampling is the limiting error; SiC density method caveats; acceptance on batch means; bed ΔP on hot coaters; external gamma densitometry proposed · 6 sources — `draft`
 - [[Passive Decay Heat Removal]] — low power density plus graphite thermal mass; why there is no system to fail · 2 sources — `draft`
+- [[PyC Layer Deposition]] — temperature sets density and chlorine permeability, coating gas fraction sets rate and porosity, anisotropy follows neither; buffer temperature conflict · 5 sources — `draft`
+- [[Coater Process Monitoring]] — what is knowable during a run: control vs bed temperature, thermocouple drift, hot sampling, pressure fluctuations as a property signal · 8 sources — `draft`
 - [[SiC Layer Deposition]] — MTS chemistry; temperature sets stoichiometry, density and grain structure; argon lowers the window (1425 °C Ar–H₂ data point); H₂/MTS and flow effects unsettled · 4 sources — `draft`
 - [[TRISO Coating Process]] — fluidised-bed CVD; why deposition parameters decide the outcome; surrogate kernels; OPyC separation conflict · 5 sources — `draft`
 - [[TRISO Coating Reactor Design]] — retort geometry set by criticality safety; nozzle, distributor and converging-section redesign; axial heating profile; soot inclusion as a fabrication defect; coater size and charge; wall vs bed temperature measurement; Geldart D basis; flat-slug defect route; scale-up beyond dimensionless groups; bed ΔP as hot-coater signal · 7 sources — `draft`
@@ -55,7 +60,8 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 
 ## Data
 
-- [[TRISO Coating Parameters]] — per-layer thickness, density, time, temperature, gases and rates across four coating lines; ORNL gas flows; AGR-1 tolerances; SiC conditions across 16 coaters; SiC temperature, INL SiC temperature and buffer rate/temperature conflicts · 5 sources — `draft`
+- [[AGR-1 Coating Variants]] — what each AGR-1 variant changed in the coater and what irradiation measured; the wiki's only fabrication-to-performance table · 3 sources — `draft`
+- [[TRISO Coating Parameters]] — per-layer thickness, density, time, temperature, gases and rates across four coating lines; IPyC two-factor study; ORNL gas flows; AGR-1 tolerances; SiC conditions across 16 coaters; SiC temperature, INL SiC temperature and buffer rate/temperature conflicts · 5 sources — `draft`
 
 ## Questions
 

@@ -2,18 +2,18 @@
 type: synthesis
 title: Overview
 status: draft
-sources: 8
+sources: 11
 tags: [triso, fabrication, cvd, spouted-bed, sic, synthesis, conflict]
 updated: 2026-10-14
 ---
 
 # Overview
 
-The evolving synthesis. Eight sources: one handbook covering coated particle fuel as a whole ([[High Temperature Gas Cooled Reactor Fuels and Materials]], 9 of 14 chapters), and seven on how the particle is made and the machine that makes it. This page follows that weighting — fabrication at the centre, fuel behaviour as the reason it matters. Page catalog: [[index]].
+The evolving synthesis. Eleven sources: one handbook covering coated particle fuel as a whole ([[High Temperature Gas Cooled Reactor Fuels and Materials]], 9 of 14 chapters), nine on how the particle is made and the machine that makes it, and one measuring what the finished particle did in reactor. This page follows that weighting — fabrication at the centre, fuel behaviour as the reason it matters. Page catalog: [[index]].
 
 ## Why the coater carries the safety case
 
-A core holds more than 10⁹ coated particles ([[Ch 01 — Introduction]] p.19) and process control holds the defective fraction below 10⁻⁵ ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.23) — of order 10⁴ defective particles per core by construction. In well-made fuel none of the eleven in-service failure mechanisms is expected to be significant; release is dominated instead by as-manufactured defects and heavy-metal contamination outside the SiC ([[Ch 08 — Fuel Failure Mechanisms]] p.77). [[TRISO Fuel Failure Mechanisms]] states the consequence: most of what looks like fuel physics is manufacturing quality in costume.
+A core holds more than 10⁹ coated particles ([[Ch 01 — Introduction]] p.19) and process control holds the defective fraction below 10⁻⁵ ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.23) — of order 10⁴ defective particles per core by construction. In well-made fuel none of the eleven in-service failure mechanisms is expected to be significant; release is dominated instead by as-manufactured defects and heavy-metal contamination outside the SiC ([[Ch 08 — Fuel Failure Mechanisms]] p.77). [[TRISO Fuel Failure Mechanisms]] states the consequence: most of what looks like fuel physics is manufacturing quality in costume. Post-irradiation examination of AGR-1 fuel bears it out particle by particle — three defective-SiC particles in ~20,000, one of them carrying soot picked up in the coater, which held through three years of irradiation and failed at 1600 °C ([[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] pp.4, 22).
 
 The weight therefore falls on deposition conditions rather than the drawing: pyrocarbon deposited at low gas concentration and low rate comes out anisotropic, shrinks under irradiation and cracks, and the IPyC/SiC bond strength turns on the same conditions ([[Ch 08 — Fuel Failure Mechanisms]] p.72). The reference recipe gives single setpoints and no tolerances ([[TRISO Coating Process]]).
 
@@ -27,13 +27,14 @@ All four layers are deposited in one uninterrupted sequence in a single spouted-
 - **Argon shifts that window down**, to ~1200 °C at 90 % Ar (p.9), which is how ORNL meets the density specification at 1425 °C in 1:1 Ar–H₂ ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.8).
 - **Deposition rate is linear in MTS flux** across four coaters (Hu et al. 2025 p.15), and coating efficiency rises with batch charge — 41 % at 10 g to 97 % at 200 g (p.16).
 - **The single central gas orifice is abandoned everywhere.** INL and INET reached multi-orifice designs independently, each fixing nozzle accretion ([[TRISO Coating Reactor Design]]).
+- **Pyrocarbon density is set by deposition temperature and falls as it rises**, from 1.978 g/cm³ at 1170 °C to 1.746 at 1325 °C, which is what pins the IPyC layer near 1265 °C ([[PyC Layer Deposition]]).
 
 ## What is not established
 
-- **No process window for the pyrocarbon layers**, though anisotropy is the property that governs failure ([[TRISO Coating Process]]).
+- **Pyrocarbon anisotropy** — the property that governs shrinkage cracking — follows neither temperature nor gas fraction cleanly, and is the one pyrocarbon property still unmapped ([[PyC Layer Deposition]]).
 - **H₂/MTS effects are contested** on stoichiometry, density and grain size alike; the ratio means little without the MTS flux and total flow beside it, which most studies omit (Hu et al. 2025 p.17).
 - **Only one line publishes gas flows** ([[TRISO Coating Parameters#Gas flows (ORNL)]]).
-- **Where temperature is measured differs by line** — outer wall usually (Hu et al. 2025 p.3), in the bed at ORNL (Jolly et al. 2016 p.5) — which may explain much of the cross-line spread (`#inferred`, [[SiC Layer Deposition]]).
+- **Where temperature is measured differs by line**, and the gap is large: a 1600 °C control setpoint is a 1430–1500 °C bed, and a bed can swing 150 °C within one layer ([[Coater Process Monitoring]]). That reconciles the SiC temperatures across four lines and leaves each line's own offset unknown.
 - **All hydrodynamic data are cold.** Air with glass or ZrO₂; nothing at coating temperature with dense kernels ([[Spouted Bed Hydrodynamics]]).
 
 ## The coater is run blind
@@ -48,8 +49,8 @@ Setpoints need re-optimising at each retort diameter, because gas residence time
 
 | Disagreement | Where |
 |---|---|
-| SiC deposition temperature, four lines (1425–1600 °C) | [[TRISO Coating Parameters#Conflicts]] |
-| INL's own SiC temperature, 1600 vs ≤ 1550 °C | [[TRISO Coating Parameters#Conflicts]] |
+| Buffer deposition temperature, US ~1450 °C vs German/INET ~1255 °C | [[PyC Layer Deposition]] |
+| Do surrogate kernels reproduce coater hydrodynamics | [[Coater Process Monitoring]] |
 | Buffer deposition time and rate, ~4× spread | [[TRISO Coating Parameters#Conflicts]] |
 | High-density SiC outside the "optimum" window | [[SiC Layer Deposition]] |
 | Fine-grained SiC: better retention or more silver release | [[Silver Release]] |
@@ -58,6 +59,8 @@ Setpoints need re-optimising at each retort diameter, because gas residence time
 | Kernels as Geldart Group B or D | [[Fluidization#Geldart classification]] |
 | Predicted peak accident fuel temperature | [[TRISO Coating Reactor Design]] |
 
+Two earlier disagreements have closed: the four SiC deposition temperatures and INL's own 1600 vs 1550 °C turned out to be control setpoints read against bed temperatures ([[TRISO Coating Parameters#Conflicts]]).
+
 ## What would move this furthest
 
-Part 2 of Hu et al., for the pyrocarbon window; the AGR-1 and AGR-2 irradiation reports, which would tie fabrication parameters to measured in-reactor performance — a link the wiki currently carries through [[Ch 08 — Fuel Failure Mechanisms]] alone; and any hot-bed hydrodynamic measurement at all.
+The AGR-1 PIE final report and the per-lot fabrication reports (ORNL/TM-2006/019–022), which would turn [[AGR-1 Coating Variants]] from three compacts into the full variant comparison; the AGR-2 PIE final report; and hot-bed hydrodynamic measurement, still absent — the 400 Hz pressure records on one production coater ([[Coater Process Monitoring]]) are the closest thing in the wiki.

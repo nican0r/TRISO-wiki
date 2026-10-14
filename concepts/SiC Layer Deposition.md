@@ -2,9 +2,9 @@
 type: concept
 title: SiC Layer Deposition
 status: draft
-sources: 4
+sources: 6
 tags: [triso, sic, cvd, mts, stoichiometry, microstructure, density, conflict, inferred]
-updated: 2026-09-23
+updated: 2026-10-14
 ---
 
 # SiC Layer Deposition
@@ -42,11 +42,24 @@ On flat substrates the preferred crystal orientation switches from ⟨111⟩ at 
 
 A bed-measured production condition inside the argon-shifted band: ORNL (Oak Ridge National Laboratory) deposits SiC at 1425 °C in 1:1 Ar–H₂ with MTS at 0.47 % of total flow (H₂/MTS ≈ 106, derived), temperature read by optical pyrometer in the bed. It reached 3.1983 g/cm³ and passed the AGR-1 (US Advanced Gas Reactor programme) grain-size standard ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] pp.5, 8–10). Fig. 11 marks a 1430 °C, 50 % Ar point stoichiometric (read off the plot); ORNL did not measure stoichiometry. Its outer SiC surface was rougher than on AGR-1 particles — a property no specification covers (p.9). Full recipe: [[TRISO Coating Parameters#Gas flows (ORNL)]].
 
+## MTS concentration is limited by density
+
+At a 1600 °C control setpoint in hydrogen alone, SiC density falls as MTS concentration rises and drops below the 3.19 g/cm³ specification above about **2.0 mol% MTS** ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.26). Adding 20–30 % argon holds density above specification at 2.78–3.17 % MTS and a 1550 °C setpoint — the trade that produced the AGR-2 variant condition. The throughput gain is smaller than it looks: coating time fell only ~10 %, because total gas flow was cut ~36 % to keep the bed fluidising the same way (p.26).
+
+![[bw-coater-p27-fig08-sic-density-vs-mts.jpeg]]
+*SiC density vs MTS concentration, hydrogen-only against argon-diluted runs — Barnes and Marshall 2008 p.27.*
+
+Defect fraction does not follow the same levers: across 26 batches it varied from <0.2 to 67 per 50,000 particles with no correlation to any coating parameter measured, while thicker SiC layers passed more often — 13 of 15 batches at ≥ 34.5 µm against 2 of 10 below it (p.27).
+
+## Finer grain, measured in reactor
+
+Argon dilution gives finer grain ([[TRISO Coating Parameters]]), and AGR-1's Variant 3 used it. Its compact released one to two orders of magnitude less Sr, Ce, Sm and Eu than the Baseline compact, which [[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] attributes tentatively to smaller grains and more localised trapping defects; the process became the baseline for AGR-2 and beyond (pp.8, 25). One compact per lot — see [[AGR-1 Coating Variants]] for what that supports, and [[Silver Release]] for why silver is the exception.
+
 ## What is not settled
 
 - **H₂/MTS ratio.** One study found free carbon eliminated above a ratio of 30. Another found MTS and H₂ flux had negligible effect on Si content (p.9). Individual studies report a link between the ratio and density, but the compiled data show none (p.12, Fig. 19). Grain size is finer at very low (< 10) or very high (> 199) ratios than at 60–80 (p.9). The review's own diagnosis: the ratio is an indirect variable, and without MTS flux and total flow reported alongside it, datasets cannot be compared (p.17).
 - **Gas flow and fluidisation regime.** Both are rarely reported. Only one coater's flow-rate series is available, and it shows no clear trend (p.10). How the bed moves matters: particles coated while stationary came out porous and of poor quality under otherwise similar settings (p.9).
-- **Grain size.** Fine grains are the acceptance criterion ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.34), but the retention evidence conflicts — see [[Silver Release]].
+- **Grain size.** Fine grains are the acceptance criterion ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.34); irradiation evidence now favours them for most species but not for silver ([[AGR-1 Coating Variants]], [[Silver Release]]).
 
 ## Rate and throughput
 
@@ -67,4 +80,5 @@ Deposition rate rises linearly with MTS flux on all four coaters where it has be
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]]
 - [[Ch 02 — Manufacture of TRISO Coated Particles]] · [[Ch 01 — Introduction]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
+- [[FY 2008 Six-Inch Diameter Coater Test Report]] · [[PIE on Five Irradiated AGR-1 Compacts]]
 - Data: [[TRISO Coating Parameters]]

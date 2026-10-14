@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Coating Reactor Design
 status: draft
-sources: 7
+sources: 9
 tags: [triso, cvd, spouted-bed, fabrication, reactor-design, fluidization, gas-distributor, conflict]
-updated: 2026-10-11
+updated: 2026-10-14
 ---
 
 # TRISO Coating Reactor Design
@@ -49,6 +49,11 @@ A "flat" slug forming above the gas inlet impairs bed circulation and is said to
 
 Carbonaceous soot generated during buffer (carbon) layer deposition accumulates above the bed fountain and on the cylindrical retort wall; ejecta from the bed occasionally carries a loosely adherent soot layer back in (the general mechanism — bursting bubbles throwing particles into the freeboard — is on [[Fluidization#Entrainment]]), where it becomes encapsulated within the coating layer being deposited. It is frequently observed in particles from a 5 cm lab-scale coater with a single gas inlet at the cone apex, and infrequently observed in the 15 cm production coater once the multi-orifice nozzle, curvilinear converging section and dual gas paths above are combined ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.8–9).
 
+The defect has since been found in irradiated fuel and followed to its consequence: one AGR-1 particle with porous, deformed SiC from soot picked up on the IPyC retained caesium through three years of irradiation and cracked during 1600 °C safety testing ([[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] pp.4, 22, 24). See [[AGR-1 Coating Variants]].
+
+![[agr1-pie-p24-fig24-porous-sic-tomograph.jpeg]]
+*X-ray tomograph of the affected particle; the porous arc is the soot-seeded SiC — Hunn et al. 2012 p.24.*
+
 This is a distinct failure route from the eleven service mechanisms on [[TRISO Fuel Failure Mechanisms]] — those describe how a correctly built particle degrades in reactor; soot inclusion is a particle built with a flaw already in it, the kind of as-manufactured defect that page and [[Fuel Quality Control and Characterization]] both point to as the dominant real-world release driver.
 
 ## Bed growth through the coating sequence
@@ -67,6 +72,8 @@ Nominal, 425 µm kernel ([[Spouted Bed Design Considerations for Coated Nuclear 
 
 No sight ports, internal thermocouples or optical pyrometers are used: a hanging thermocouple's radial position can't be controlled or maintained, the radial temperature profile makes any single internal reading unreliable, and opaque black smoke from pyrocarbon deposition blocks optical access. Temperature is held by external, wall-offset thermocouples and gas-flow parameters alone, and the result is checked only after the run — by metallographic cross-section and, for defect fraction, by burn-leach ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.5). See [[Fuel Quality Control and Characterization]] for what that post-run measurement covers.
 
+A production coater states the gap between the two: a control setpoint of 1600 °C corresponds to a **bed temperature of 1430–1500 °C** during SiC deposition, and the bed is not steady within a layer — it runs 1390 → 1540 °C across a 4–7 minute buffer deposition at a fixed setpoint ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] pp.19, 26). Control-thermocouple drift also pushed two run series off the pyrocarbon density specification before anyone could notice, since characterization follows the run (p.21). Full practice across lines, and what else can be measured mid-run: [[Coater Process Monitoring]].
+
 A review of 16 coater studies gives outer-wall measurement as the usual practice, because an internal thermocouple both disturbs the gas flow and gets coated ([[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] p.3). It also names differing temperature measurement as one likely reason SiC deposited at nominally the same temperature varies in density between coaters (p.12).
 
 INET's coater schematic shows an infrared pyrometer on the furnace ([[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] p.2, Fig. 1); whether it views the bed or the wall is not stated. Different practice on a different line — not reconciled.
@@ -80,7 +87,7 @@ Bed pressure drop needs no internal access and is described as one of the most e
 
 ## Scale-up is not linear
 
-At constant linear deposition rate, gas flow scales with bed mass (∝ retort diameter³) while superficial gas velocity scales with the retort's cross-sectional area (∝ diameter), so gas residence time falls as the retort gets larger — and the wall-surface-area-to-gas-flow ratio driving external temperature control falls with it. Laboratory-scale temperature setpoints are stated to be inaccurate at larger diameters as a direct result, requiring re-optimisation at each production scale rather than simple extrapolation ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] pp.4, 6). Cold-flow work shows why matched dimensionless groups are not enough: between a 0.152 m and a 0.076 m bed they reproduced spout diameter and fountain height but left spout holdup and particle velocity 15–46 % apart; matching the radial gas-holdup profile is proposed instead ([[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques|Biswas & Al-Dahhan 2012]] pp.33–51; soft). Detail: [[Spouted Bed Hydrodynamics#Scale-up]].
+At constant linear deposition rate, gas flow scales with bed mass (∝ retort diameter³) while superficial gas velocity scales with the retort's cross-sectional area (∝ diameter), so gas residence time falls as the retort gets larger — and the wall-surface-area-to-gas-flow ratio driving external temperature control falls with it. Laboratory-scale temperature setpoints are stated to be inaccurate at larger diameters as a direct result, requiring re-optimisation at each production scale rather than simple extrapolation ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] pp.4, 6). One relation does transfer: IPyC density against bed temperature is the same in a 2-inch and a 6-inch coater, with a shallower slope in the larger one ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.21) — see [[PyC Layer Deposition]]. Cold-flow work shows why matched dimensionless groups are not enough: between a 0.152 m and a 0.076 m bed they reproduced spout diameter and fountain height but left spout holdup and particle velocity 15–46 % apart; matching the radial gas-holdup profile is proposed instead ([[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques|Biswas & Al-Dahhan 2012]] pp.33–51; soft). Detail: [[Spouted Bed Hydrodynamics#Scale-up]].
 
 ## Coater size and batch charge
 
@@ -106,5 +113,6 @@ The review classifies kernels as Geldart Group D (large, dense) particles, which
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
 - [[Introduction to Fluidization]] · theory: [[Fluidization]]
 - [[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating]]
+- [[FY 2008 Six-Inch Diameter Coater Test Report]] · [[PIE on Five Irradiated AGR-1 Compacts]] · monitoring: [[Coater Process Monitoring]]
 - [[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques]] · [[Spouted Bed Hydrodynamics]]
 - Data: [[TRISO Coating Parameters]]

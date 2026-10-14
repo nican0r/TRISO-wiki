@@ -2,9 +2,9 @@
 type: concept
 title: Fission Product Retention
 status: draft
-sources: 1
+sources: 2
 tags: [triso, fission-product-release, sic, accident-testing]
-updated: 2026-08-25
+updated: 2026-10-14
 ---
 
 # Fission Product Retention
@@ -26,6 +26,10 @@ The 1600 °C threshold is the accident limit. The **highest normal operating fue
 ## What escapes regardless
 
 About **10⁻⁵ of an element's uranium sits outside the SiC boundary by construction**: uranium trapped in the coating layers during coating ("tramp" uranium) plus impurities in the matrix material and in the PyC source material ([[Ch 01 — Introduction]] p.22). The modern manufactured defect fraction is the same order, below 10⁻⁵ ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.23). Retention is therefore never total, and the floor is set in the factory — which is what [[Ch 09 — Accident Testing]] means when it attributes release to as-manufactured defects and heavy metal contamination rather than to in-service mechanisms.
+
+## Measured, in irradiated fuel
+
+[[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] leached five AGR-1 compacts after irradiation and found that what crosses intact SiC in quantity is **silver, palladium and europium**: for the Baseline compact, 1.2 × 10⁻¹ of ¹¹⁰ᵐAg, 1.1 × 10⁻² of ¹⁰⁵Pd and 1.4 × 10⁻² of ¹⁵⁴Eu, against 8.0 × 10⁻⁵ of ¹³⁷Cs (p.7). Caesium retention averaged 99 % per particle (p.8), which is why caesium loss is the marker used to find particles with broken SiC. Strontium, cerium, samarium and plutonium sit between, and their release differs by coating variant — [[AGR-1 Coating Variants]].
 
 ## Evidence that the floor is manufactured, not operational
 
@@ -56,5 +60,6 @@ Burnup consumes that margin. Below 11% FIMA (fissions per initial metal atom) th
 > `#conflict`
 
 ## Sources
+- [[PIE on Five Irradiated AGR-1 Compacts]]
 
 - [[Ch 09 — Accident Testing]] · [[Ch 08 — Fuel Failure Mechanisms]] — both from [[High Temperature Gas Cooled Reactor Fuels and Materials]]

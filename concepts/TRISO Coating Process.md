@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Coating Process
 status: draft
-sources: 5
+sources: 7
 tags: [triso, cvd, fabrication, fluidised-bed, sic, pyc, surrogate, conflict, inferred]
-updated: 2026-09-23
+updated: 2026-10-14
 ---
 
 # TRISO Coating Process
@@ -17,7 +17,7 @@ Kernels are suspended by flowing gas in a heated fluidised bed reactor. Coating 
 
 Buffer from C₂H₂ in argon at 1250 °C; IPyC (inner pyrocarbon) and OPyC (outer pyrocarbon) from C₂H₂ + C₃H₆ in argon at 1300 °C; SiC from CH₃SiCl₃ in hydrogen at 1500 °C (Table 2, [[Ch 02 — Manufacture of TRISO Coated Particles]] p.33). Per-layer temperatures, times, densities and rates from three sources, with their disagreements: [[TRISO Coating Parameters]]. Reactions: $\text{C}_2\text{H}_2 \rightarrow 2\text{C} + \text{H}_2$; $\text{C}_3\text{H}_6 \rightarrow 3\text{C} + 3\text{H}_2$; $\text{CH}_3\text{SiCl}_3 \rightarrow \text{SiC} + 3\text{HCl}$.
 
-**SiC is the outlier on every axis**: 25–50× slower than the pyrocarbon layers (0.2 against 5–10 µm/min), 200 °C hotter, and under hydrogen rather than argon (p.33). It is the rate-limiting step of the sequence, and the HCl it liberates is the reason the IPyC layer beneath it doubles as a chlorine barrier ([[Ch 01 — Introduction]] p.22). How temperature, diluent and MTS supply set its stoichiometry, density and grain structure: [[SiC Layer Deposition]].
+**SiC is the outlier on every axis**: 25–50× slower than the pyrocarbon layers (0.2 against 5–10 µm/min), 200 °C hotter, and under hydrogen rather than argon (p.33). It is the rate-limiting step of the sequence, and the HCl it liberates is the reason the IPyC layer beneath it doubles as a chlorine barrier ([[Ch 01 — Introduction]] p.22). How temperature, diluent and MTS supply set its stoichiometry, density and grain structure: [[SiC Layer Deposition]]; the equivalent map for the three pyrocarbon layers: [[PyC Layer Deposition]].
 
 Two production lines give comparable recipes. The US line deposits all four layers in one batch sequence across 1230–1550 °C ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.2); the INET (Institute of Nuclear and New Energy Technology, Tsinghua) line runs PyC at ~1260–1300 °C and SiC at ~1600 °C ([[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] p.5). A development line at ORNL (Oak Ridge National Laboratory), coating ZrO₂ surrogates, runs IPyC/OPyC at 1265/1290 °C and both buffer and SiC at 1425 °C, the SiC in 1:1 Ar–H₂ rather than hydrogen alone ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.5); it is the only line with published gas flows. The SiC temperature is a four-way disagreement, flagged on [[TRISO Coating Parameters]]. Reactor engineering behind the recipe: [[TRISO Coating Reactor Design]].
 
@@ -50,7 +50,7 @@ A recipe does not carry over between kernels. Starting from AGR-1 (US Advanced G
 | Specific heat (J/g·K) | > 0.3 | 0.45–0.65 |
 | Thermal conductivity (W/m·K) | < 5 | < 4 |
 
-Resulting recipe: [[TRISO Coating Parameters#Gas flows (ORNL)]]. Surrogates also change how the finished particle behaves under characterization: see the separation conflict above.
+Resulting recipe: [[TRISO Coating Parameters#Gas flows (ORNL)]]. Surrogates also change how the finished particle behaves under characterization (the separation conflict above) and how the bed behaves: pressure-fluctuation regressions had to be fitted separately for coated ZrO₂ and coated NUCO, with some coefficients of opposite sign, despite matched particle diameter and density ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.46). Chemistry may carry over where hydrodynamics does not — [[Coater Process Monitoring]].
 
 > [!info] Inferred — per-kernel mass differs ~6.5×
 > An 800 µm ZrO₂ kernel weighs 1.592 mg (Jolly et al. 2016 p.7, measured); a 350 µm, 10.92 g/cm³ AGR-1 kernel computes to ~0.245 mg (p.3 values, sphere assumed). The surrogate is about half as dense but ~6.5× heavier per particle, so neither density nor mass is matched. Which governs the fluidisation change is not stated; the development-run report (ORNL/LTR-2015/432) might say.
@@ -77,4 +77,5 @@ Finished particles are sieved for size and sorted on an inclined vibrating table
 - [[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]]
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]] · [[SiC Layer Deposition]]
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
+- [[FY 2008 Six-Inch Diameter Coater Test Report]] · [[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed]] · [[PyC Layer Deposition]]
 - Data: [[TRISO Coating Parameters]]

@@ -3,13 +3,13 @@ type: data
 title: TRISO Coating Parameters
 status: draft
 tags: [triso, cvd, fabrication, pyc, sic, conflict, inferred]
-sources: 5
-updated: 2026-09-23
+sources: 7
+updated: 2026-10-14
 ---
 
 # TRISO Coating Parameters
 
-Per-layer coating conditions for the four TRISO layers, from four coating lines, plus experimental SiC conditions from 16 coater studies. Process context: [[TRISO Coating Process]]; SiC parameter–property map: [[SiC Layer Deposition]]; equipment: [[TRISO Coating Reactor Design]]; layer functions: [[TRISO Particle Architecture]].
+Per-layer coating conditions for the four TRISO layers, from four coating lines, plus experimental SiC conditions from 16 coater studies. Process context: [[TRISO Coating Process]]; SiC parameter–property map: [[SiC Layer Deposition]]; PyC parameter–property map: [[PyC Layer Deposition]]; equipment: [[TRISO Coating Reactor Design]]; layer functions: [[TRISO Particle Architecture]].
 
 ## How the sources' conditions differ
 
@@ -85,6 +85,23 @@ As applied to the ORNL batch ([[Fabrication and Characterization of Surrogate TR
 > µm/min. Assumes the stated time is pure deposition time at constant rate; if it includes gas switching or ramps, derived rates are underestimates. Dense PyC agrees between INL and INET to within 5 %; ORNL's runs 45–85 % faster, at CGF 0.15. The buffer and SiC disagree across all lines. Confirmation would need a source stating rate directly, or gas concentration and flow per layer.
 > `#inferred`
 
+## IPyC conditions from a two-factor study
+
+[[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed|Lowden et al. 2005]] varied only IPyC temperature and coating gas fraction on one coater, with all gas flows stated (ORNL 2-inch, 346–347 µm NUCO kernels, 62.25 g charge, propylene/acetylene 0.85, 8,500 sccm total):
+
+| T (°C) | CGF | Rate (µm/min) | Density (g/cm³) | Diattenuation N | Open porosity (ml/m²) |
+|---|---|---|---|---|---|
+| 1170 | 0.30 | 2.3 | 1.978 | 0.0099 | 0.71 |
+| 1225 | 0.30 | 2.6 | 1.962 | 0.0078 | 1.10 |
+| 1250 | 0.30 | 2.9 | 1.909 | 0.0048 | 1.32 |
+| 1275 | 0.30 | 3.2 | 1.829 | 0.0038 | — |
+| 1300 | 0.30 | 2.9 | 1.831 | 0.0052 | — |
+| 1325 | 0.30 | 3.5 | 1.773 | 0.0040 | — |
+| 1275 | 0.15 | 1.5 | 1.813 | 0.0075 | 0.83 |
+| 1275 | 0.45 | 4.7 | 1.873 | 0.0050 | 1.85 |
+
+Lowden et al. 2005 p.34; full 17-run table on the source page. Note the direction: **density falls as temperature rises**, so the 1.90 g/cm³ specification pins IPyC deposition near 1265 °C bed ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.21).
+
 ## SiC across coaters
 
 Experimental ranges, not nominal recipes. Condensed from Table 1 of [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] pp.5–6, which compiles the underlying studies (the "Study" column). Coaters are identified by internal diameter. "—" means not given.
@@ -114,22 +131,22 @@ Five of the 16 coated uranium compounds; the rest used surrogates (ZrO₂, Al₂
 
 ## Conflicts
 
-> [!warning] Conflict — SiC deposition temperature
-> [[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] gives ~1600 °C (pp.2, 5); [[Ch 02 — Manufacture of TRISO Coated Particles]] gives 1500 °C (p.33); [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] gives a whole-process maximum of 1550 °C (p.2). None states where the temperature is measured — setpoint, wall, or bed — and a furnace with a strong axial gradient ([[TRISO Coating Reactor Design]]) makes that difference material. A fourth line, ORNL, deposits SiC at 1425 °C, measured in the bed by optical pyrometer, in 1:1 Ar–H₂ ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.5). Unresolved.
-> `#conflict`
-
-> [!info] Inferred — all three sit inside the stoichiometric window
-> All three values fall within the 1500–1600 °C window that [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] p.8 identifies as giving stoichiometric SiC in H₂. The same review notes that temperature is typically measured on the furnace outer wall (p.3), and it gives differing temperature measurement as one explanation for density scatter between studies (p.12). The disagreement may therefore be partly about where the temperature is measured, not the process itself. The values still differ, so the conflict above stays open. Confirmation would need each line's measurement position.
+> [!info] Resolved by measurement position — SiC deposition temperature
+> The four nominal SiC temperatures in this wiki are not four processes. [[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] states the offset directly: a **control-thermocouple setpoint of 1600 °C corresponds to a bed temperature of 1430–1500 °C**, and the AGR-2 variant's control 1550 °C to an estimated bed 1430–1450 °C (pp.7, 26). On that scale, 1500 °C ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.33), ≤ 1550 °C ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.2) and ~1600 °C ([[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] pp.2, 5) are consistent with a bed at roughly 1430–1500 °C, which is where ORNL's bed-measured 1425 °C ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.5) already sat. Optical measurement carries its own offset: ORNL shifted its reported temperatures by 25 °C after calibrating the sight glass and prism ([[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed|Lowden et al. 2005]] p.6).
 >
-> ORNL's 1425 °C falls below the H₂ window but is the one bed-measured value, and is run in 50 % Ar. On the Ar–H₂ phase map (Hu et al. 2025 p.9, Fig. 11, citing Liu et al. 2016) a 1430 °C, 50 % Ar point is marked stoichiometric, near the band's upper edge (read off the plot; different coater). Argon, not measurement position, is the likelier explanation for this one. It met density ≥ 3.19 g/cm³ ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.8), consistent with that reading; stoichiometry was not measured.
+> What remains open is per-line, not global: no source states where the IAEA generic or INET figures are measured, so each line's offset is unknown rather than wrong. Retagged from `#conflict` to `#inferred` — this was a comparison of unlike measurements, not a disagreement between sources. Confirmation would need each line's thermocouple position or a bed calibration. Practice across lines: [[Coater Process Monitoring]].
 > `#inferred`
 
-> [!warning] Conflict — INL SiC temperature
-> [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] Table 1 (p.5, citing Barnes and Marshall 2008) lists the INL 15.24 cm coater at 1600 °C in H₂–MTS. [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] gives 1550 °C as the maximum for the whole coating sequence on the same line (p.2). The 2008 figure may be a test condition rather than a production setpoint — the review does not say. Unresolved.
-> `#conflict`
+> [!info] Resolved — INL SiC temperature
+> [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] Table 1 lists the INL 15.24 cm coater at 1600 °C in H₂–MTS (p.5), against a 1550 °C whole-process maximum in [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.2. The primary source for that coater is now in the wiki: 1600 °C is its **control setpoint**, corresponding to a bed temperature of 1430–1500 °C ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.26). The two figures are a setpoint and a process limit on different scales, not a disagreement.
+> `#inferred`
 
 > [!warning] Conflict — buffer deposition time and rate
 > For a buffer of near-identical thickness, INET gives ~2.5 min for 95 µm (p.5), INL 5 min for 100 µm (p.5), and IAEA a rate of 10 µm/min (p.33), which would take ~9.5 min. ORNL deposits 98.7 µm in 1.15 min, at 1425 °C and CGF 0.58 ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] pp.5, 8) — where IAEA and INET give ~1250–1260 °C. Spread ≈ 9× in rate. Density does not track rate: the fastest buffer (ORNL, 1.01 g/cm³, from a proxy run) is denser than INET's (0.9). No source links rate, temperature and density. Unresolved.
+> `#conflict`
+
+> [!warning] Conflict — buffer deposition temperature
+> The US lines coat the buffer hot: 1450 °C bed in the AGR-1 2-inch coater and 1390–1540 °C bed across a single 4–7 minute deposition in the 6-inch coater ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] p.19), with ORNL at 1425 °C. The IAEA generic and INET lines give 1250–1260 °C. Unlike the SiC case above this is not a measurement-position artefact — the US figures are bed temperatures — and both routes meet their buffer density specifications. Unresolved. See [[PyC Layer Deposition]].
 > `#conflict`
 
 ## Sources

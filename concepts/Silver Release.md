@@ -2,9 +2,9 @@
 type: concept
 title: Silver Release
 status: draft
-sources: 2
+sources: 3
 tags: [triso, fission-product-release, silver, maintenance, direct-cycle, conflict]
-updated: 2026-09-22
+updated: 2026-10-14
 ---
 
 # Silver Release
@@ -42,9 +42,22 @@ Note that even in the zero-failure 1600 °C tests, silver release is measurable 
 
 Silver breaks the otherwise clean story that fission products stay inside the particle until the accident threshold. It escapes during **normal operation**, at temperatures a high-outlet-temperature design deliberately runs at, through coatings that are working as designed. A design targeting outlet temperatures above 900 °C is by construction operating in the regime where this occurs.
 
+## What AGR-1 measured
+
+[[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] gamma-scanned every particle in each compact, and found silver retention varying across the full range **within a single compact** — from the full calculated inventory to below detection — with no correlation to any visible radiation-induced change in the coating (pp.4, 10). Two observations point at mechanisms:
+
+- Particles that released more silver show **palladium–uranium clusters further into the SiC** from the IPyC interface (p.22). The authors ask for verification; it links silver transport to the palladium attack described on [[TRISO Fuel Failure Mechanisms]].
+- **Thermal cycling released additional silver.** Power-supply failures cycled one 1600 °C safety test, silver release followed, and two further cycles were added deliberately to confirm it (p.22).
+
+![[agr1-pie-p22-fig22-pd-clusters-vs-silver.jpeg]]
+*SiC from two particles of one compact: average silver retention (a) and silver below detection (b); bright spots are Pd–U clusters — Hunn et al. 2012 p.22.*
+
+Compact-level release of ¹¹⁰ᵐAg outside intact SiC ran to 12 % of inventory in the Baseline lot (p.7). Per-lot figures and why they are not comparable: [[AGR-1 Coating Variants]].
+
 ## Contested / uncertain
 
 > [!warning] Conflict — does fine-grained SiC help or hurt?
+> Irradiation evidence now sits on both sides. [[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] found the finer-grain, argon-deposited Variant 3 lot released far less Sr, Ce, Sm and Eu than Baseline, and silver release between the two lots cannot be compared because the method counts only what stayed in the compact (pp.7, 25). So finer grain looks better for the carbide formers and remains unresolved for silver.
 > Finer-grained SiC gave better fission product retention in Petti et al. (2003) but higher silver release at elevated temperature in Gerczak et al. (2016). Both are cited second-hand in [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production|Hu et al. 2025]] p.2, which does not resolve them. It nonetheless recommends argon dilution "to produce fine-grain SiC to prevent fission product migration" (p.17). Fine grains are also a SiC acceptance criterion ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.34). How deposition sets grain size: [[SiC Layer Deposition]]. Unresolved; the primary papers are not in the wiki.
 > `#conflict`
 
@@ -52,3 +65,4 @@ Silver breaks the otherwise clean story that fission products stay inside the pa
 
 - [[Ch 08 — Fuel Failure Mechanisms]] · [[Ch 09 — Accident Testing]] — both from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]]
+- [[PIE on Five Irradiated AGR-1 Compacts]] · variants: [[AGR-1 Coating Variants]]

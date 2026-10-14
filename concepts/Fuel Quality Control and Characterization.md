@@ -2,9 +2,9 @@
 type: concept
 title: Fuel Quality Control and Characterization
 status: draft
-sources: 6
+sources: 7
 tags: [qa-qc, metrology, defect-fraction, anisotropy, burn-leach, inferred]
-updated: 2026-10-11
+updated: 2026-10-14
 ---
 
 # Fuel Quality Control and Characterization
@@ -77,6 +77,12 @@ Acceptance is judged on batch means, and not every property is measured on the b
 > The same batch passed OPyC density at 1.8937 g/cm³ against 1.90 ± 0.05 (p.8). Its data form shows 6 of 29 fragments at 1.824–1.830 g/cm³, below the lower limit, and the rest at 1.900–1.926 (p.29). The report does not comment. A second density population in the layer and a fragment-preparation artefact are both possible; a repeat measurement would tell them apart.
 > `#inferred`
 
+## The sample that has to be taken mid-run
+
+Buffer and IPyC density cannot be measured on a finished particle, so a cup is lowered into the hot bed and withdrawn: "hot sampling", used in nine tests of one 2008 campaign plus two production runs ([[FY 2008 Six-Inch Diameter Coater Test Report|Barnes and Marshall 2008]] pp.7, 19). The sampler could not take a buffer and an IPyC sample in the same run. Everything else is post-run and destructive, which is why a drifting thermocouple can put two series of runs off specification before anyone knows (p.21). What can be watched live instead: [[Coater Process Monitoring]].
+
+Two measurement cautions from the same campaign: SiC defect fraction varied over two orders of magnitude across batches with no correlation to any coating parameter, though batches with thicker SiC passed far more often (p.27); and two laboratories' mercury porosimeters disagreed materially on OPyC surface-connected porosity, the difference traced to instrument model (p.9).
+
 ## Coating itself is controlled blind
 
 The CVD (chemical vapor deposition) step that produces the layers measured above is run without any internal view of the bed: no sight ports, no internal thermocouples (a top-hung probe's radial position can't be controlled, and the radial temperature profile makes a single internal reading unreliable anyway), no optical pyrometry (blocked by opaque smoke during pyrocarbon deposition). Temperature is held by external, wall-offset thermocouples and gas-flow parameters alone, and the result is checked only after the run ([[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] p.5). Bed pressure drop is already available on hot coaters and its fluctuations track spouting regime in cold mockups ([[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating|Zhou et al. 2005]] pp.2, 12). A further external alternative has been proposed: gamma-ray densitometry, a source and detector outside the vessel, identified spouting regime transitions in cold flow to within 3.4 % of pressure-fluctuation measurements ([[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques|Biswas & Al-Dahhan 2012]] pp.5, 20) — not demonstrated on a hot coater. Not every coater works this way: ORNL's development coater reads bed temperature by optical pyrometer through a top sight glass ([[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels|Jolly et al. 2016]] p.5). This is the other half of why measurement carries so much weight here: the safety case rests on defect fractions rather than in-service margins, and the fabrication step producing those defects cannot be observed while it happens. See [[TRISO Coating Reactor Design]].
@@ -86,6 +92,7 @@ The CVD (chemical vapor deposition) step that produces the layers measured above
 - [[Ch 04 — QA-QC and Characterization]] · [[Ch 05 — Fabrication of Fuel Compacts]] · [[Ch 02 — Manufacture of TRISO Coated Particles]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
 - [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]]
+- [[FY 2008 Six-Inch Diameter Coater Test Report]] · [[Coater Process Monitoring]]
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
 - [[Hydrodynamic Correlations with Experimental Results from Cold Mockup Spouted Beds for Nuclear Fuel Particle Coating]]
 - [[Advancing the Fundamental Understanding and Scale-up of TRISO Fuel Coaters via Advanced Measurement and Computational Techniques]]

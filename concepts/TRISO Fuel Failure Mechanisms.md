@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Fuel Failure Mechanisms
 status: draft
-sources: 2
+sources: 3
 tags: [triso, fuel-performance, failure-mechanisms, fabrication]
-updated: 2026-09-08
+updated: 2026-10-14
 ---
 
 # TRISO Fuel Failure Mechanisms
@@ -24,6 +24,15 @@ The eleven documented modes fall into three groups by driver, each detailed on [
 The chapter's own conclusion inverts the intuitive picture: in well-made fuel none of these is expected to be significant, and release is dominated instead by as-manufactured defects and by heavy metal contamination outside the SiC layer (p.77). These are largely a manufacturing quality problem wearing the costume of a physics problem.
 
 One concrete as-manufactured defect, from a different source: **soot inclusion**, carbon soot swept into the bed and encapsulated within a coating layer during CVD (chemical vapor deposition). It is a fabrication-stage flaw rather than a thirteenth in-service mechanism — see [[TRISO Coating Reactor Design]].
+
+## Both routes, observed in irradiated fuel
+
+[[PIE on Five Irradiated AGR-1 Compacts|Hunn et al. 2012]] found the mechanisms above in AGR-1 particles, and separated them by when they failed:
+
+- **In-service chain**: buffer densification and shrinkage → buffer fracture → IPyC cracking → in rare cases the crack propagates through the SiC. The two particles that released caesium during irradiation failed this way, both from the lower-density-IPyC variant lot (p.4).
+- **As-manufactured**: one particle carried porous, deformed SiC from soot picked up on the IPyC when it was over-fluidised in the coater. It retained caesium through three years of irradiation and cracked only in the 1600 °C safety test (pp.4, 22, 24).
+
+Three defective-SiC particles in roughly 20,000 across five compacts, with no ⁸⁵Kr release from any compact (p.4) — the quantitative version of this page's framing. Variant-by-variant: [[AGR-1 Coating Variants]].
 
 ## A twelfth route, from outside the particle
 
@@ -50,6 +59,7 @@ Prismatic geometry is penalised twice relative to pebble beds, on the same under
 For irradiation testing, the chapter twice recommends limiting burnup or power acceleration to **no more than three times** the expected reactor condition, specifically to avoid inducing kernel migration and fission product attack that would not occur in service — false positives from over-accelerated tests (pp.73–74). [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] shows the recommendation being followed (ATR (Advanced Test Reactor) and HFR-Petten, both under 3×) and describes what happened when it was not, including US irradiations accelerated up to 10× (pp.61–63). It also complicates the fabrication story: the 1000× German/US gap in end-of-life fission gas release is confounded with that difference in acceleration. See [[Fuel Qualification Irradiation Testing]].
 
 ## Sources
+- [[PIE on Five Irradiated AGR-1 Compacts]]
 
 - [[Ch 08 — Fuel Failure Mechanisms]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
 - [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]

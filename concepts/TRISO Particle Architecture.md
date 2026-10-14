@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Particle Architecture
 status: draft
-sources: 5
+sources: 6
 tags: [triso, sic, pyc, buffer, particle-design]
-updated: 2026-09-23
+updated: 2026-10-14
 ---
 
 # TRISO Particle Architecture
@@ -29,7 +29,7 @@ A second reference design — a US HEU (highly-enriched uranium)-licensed produc
 
 The SiC is the containment, but it is not self-supporting against the pressure it must hold. The pyrocarbon layers on either side of it shrink under irradiation, and where they are well bonded that shrinkage supplies compressive prestress that offsets the tensile load from fission gas and CO inside ([[Ch 01 — Introduction]] p.18, [[Ch 08 — Fuel Failure Mechanisms]] p.71). The architecture is therefore only as good as the PyC's isotropy and the PyC–SiC interface strength — which is why the acceptance criteria in [[Ch 02 — Manufacture of TRISO Coated Particles]] p.34 name impermeable, isotropic PyC and "sufficient strength" at the interfaces, and why the failures in [[Ch 08 — Fuel Failure Mechanisms]] cluster on exactly those two properties.
 
-The IPyC (inner pyrocarbon)'s chlorine function is a fabrication artefact made permanent: SiC is deposited by decomposing CH₃SiCl₃, which liberates HCl ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.31), and the IPyC is what stops that reaching the kernel during coating.
+The IPyC (inner pyrocarbon)'s chlorine function is a fabrication artefact made permanent: SiC is deposited by decomposing CH₃SiCl₃, which liberates HCl ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.31), and the IPyC is what stops that reaching the kernel during coating. How well it does so is itself a deposition parameter: uranium dispersion after chlorination rises about twentyfold from an IPyC deposited at 1170 °C to one at 1325 °C ([[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed|Lowden et al. 2005]] p.34) — [[PyC Layer Deposition]].
 
 ## Measured layer properties
 
@@ -59,4 +59,5 @@ A typical HTGR core contains **more than 10⁹ coated particles** ([[Ch 01 — I
 - [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]
 - [[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]]
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]] · SiC growth: [[SiC Layer Deposition]]
+- [[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed]] · PyC growth: [[PyC Layer Deposition]]
 - [[Fabrication and Characterization of Surrogate TRISO Particles Using 800 µm ZrO2 Kernels]]
