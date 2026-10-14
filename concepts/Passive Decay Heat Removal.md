@@ -2,9 +2,9 @@
 type: concept
 title: Passive Decay Heat Removal
 status: draft
-sources: 1
+sources: 2
 tags: [passive-safety, graphite, power-density, helium, decay-heat]
-updated: 2026-08-25
+updated: 2026-09-08
 ---
 
 # Passive Decay Heat Removal
@@ -39,6 +39,10 @@ Passive removal is only a safety case if the temperature it settles at is below 
 
 The margin between what the transient produces and what the fuel tolerates is tens of degrees, and it is established by test rather than by calculation. See [[Fission Product Retention]].
 
+> [!warning] Conflict — a lower peak-temperature claim elsewhere in the wiki
+> [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] states peak centerline core temperatures during postulated accidents "safely remain 200–300 °C below fuel fabrication temperatures" (p.3), and fabrication runs up to 1550 °C (p.2) — implying a predicted peak near 1250–1350 °C, well below the 1620 °C figure above. The two sources do not name the same reactor design or accident scenario; flagged on [[TRISO Coating Reactor Design]], not resolved here.
+> `#conflict`
+
 ## Design implications for HTGRs
 
 Low power density is not a free property — it is the price paid for this mechanism, and it sets core size, and therefore capital cost, for a given output. The passive safety case and the economics are the same design variable read in two directions.
@@ -52,3 +56,4 @@ The heat transfer path itself — conduction through the graphite to the reflect
 ## Sources
 
 - [[Ch 01 — Introduction]] · [[Ch 09 — Accident Testing]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]

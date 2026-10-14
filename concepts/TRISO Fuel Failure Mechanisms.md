@@ -2,9 +2,9 @@
 type: concept
 title: TRISO Fuel Failure Mechanisms
 status: draft
-sources: 1
+sources: 2
 tags: [triso, fuel-performance, failure-mechanisms, fabrication]
-updated: 2026-08-25
+updated: 2026-09-08
 ---
 
 # TRISO Fuel Failure Mechanisms
@@ -22,6 +22,8 @@ The eleven documented modes fall into three groups by driver, each detailed on [
 | Loss of retention without breakage | diffusion through intact layers; induced SiC permeability; PyC thermal creep; SiC thermal decomposition | temperature, burnup, fluence |
 
 The chapter's own conclusion inverts the intuitive picture: in well-made fuel none of these is expected to be significant, and release is dominated instead by as-manufactured defects and by heavy metal contamination outside the SiC layer (p.77). These are largely a manufacturing quality problem wearing the costume of a physics problem.
+
+One concrete as-manufactured defect, from a different source: **soot inclusion**, carbon soot swept into the bed and encapsulated within a coating layer during CVD (chemical vapor deposition). It is a fabrication-stage flaw rather than a thirteenth in-service mechanism — see [[TRISO Coating Reactor Design]].
 
 ## A twelfth route, from outside the particle
 
@@ -50,3 +52,4 @@ For irradiation testing, the chapter twice recommends limiting burnup or power a
 ## Sources
 
 - [[Ch 08 — Fuel Failure Mechanisms]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]]
