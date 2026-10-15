@@ -25,7 +25,6 @@ Wiki/
 ├── entities/      reactor designs, orgs, facilities, programs, materials
 ├── data/          cross-source parameter tables
 ├── questions/     open questions and filed-back answers
-├── valar/         the only place Valar-specific framing lives
 ├── assets/        figures kept from sources
 ├── bin/           pdf2md.py and any future tooling
 └── raw/           immutable sources
@@ -91,7 +90,7 @@ updated: 2026-08-25
     - **One idea per section.** If a section has grown past roughly 150 words, either it contains two ideas that want splitting, or it contains restatement that wants deleting.
     - **A gist is 3–5 sentences and stays that way.** Findings go under headings, not in the gist.
     Density and brevity are the same requirement, not opposites: a dense page says more per word, which means fewer words for the same content. Cut until removing the next word would remove a fact or a citation.
-13. **Valar framing is confined to `valar/`.** Concept pages discuss implications for HTGRs generally; the Valar-specific reading lives in `valar/` pages that link out to the concepts. Do not add "relevance to Valar" sections to concept pages.
+13. **No design-specific framing.** Pages discuss implications for HTGRs generally. Do not add "relevance to Valar" or equivalent sections tying a concept to one reactor design; that reading belongs outside the wiki. (A `valar/` directory held it until 2026-10-14 and was removed unused.)
 
 ## Page templates
 

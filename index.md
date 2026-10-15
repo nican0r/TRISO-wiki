@@ -67,8 +67,3 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 
 - [[How are fuel compacts irradiated in qualification testing]] — capsule process, acceleration limits and spectrum selection; intra-compact flux distribution identified as a gap · 1 source — `draft`
 - [[Why does the inner PyC layer shrink during irradiation]] — macroscopic shrink-then-swell behaviour and its structural role; the crystallite-level mechanism is not in the ingested sources · 2 sources — `draft`
-
-## Valar
-
-- [[Design Space]] — how the concepts here bear on Valar's prismatic HTGR — `stub`
-- [[Open Questions Valar]] — what the wiki cannot yet answer about Valar's design choices — `stub`

@@ -26,7 +26,6 @@ sources/      one page per ingested document
 concepts/     physics and engineering concepts
 data/         cross-source parameter tables
 questions/    open questions and filed-back answers
-valar/        design-specific framing, kept out of the concept pages
 assets/       figures kept from sources
 bin/          pdf2md.py, the ingest converter
 raw/          immutable originals: pdf/, md/, web/
@@ -49,10 +48,6 @@ The point of the citation rules is that an assistant reading this vault can be h
 - **Inside Obsidian** — install the [Copilot](https://github.com/logancyang/obsidian-copilot) community plugin, add an API key for your provider (OpenRouter, Anthropic, OpenAI, Gemini, or any OpenAI-compatible or local model), let it index the vault, and use **Vault QA** mode, which answers from retrieved notes rather than from the model's own knowledge. After adding pages, re-run **Force Re-Index** from the command palette, and check **List Indexed Files** if an answer looks like it missed something.
 - **An external chat client** — the [MCP Vault Bridge](https://community.obsidian.md/plugins/mcp-vault-bridge) plugin exposes the vault read-only over MCP on `127.0.0.1` behind a bearer token, so Claude Desktop, LM Studio or any MCP client can search and read these pages directly. Note that a cloud model sees whatever it retrieves.
 - **An agent in the folder** — point Claude Code, Cowork or a similar coding agent at the clone. It reads `CLAUDE.md` on its own, which is how the wiki is maintained, and it can follow `[[wikilinks]]` and open `raw/md/` to check a citation against the converted source.
-
-Retrieval alone does not keep a model honest, so give it a standing instruction. Something like:
-
-> Answer only from the pages in this vault. Every number you give must carry the citation the page gives it, in the form `value ([[Source Title]] p.N)`. If the vault does not contain the answer, say so and name the page where it would belong — do not fill the gap from your own knowledge. Treat `#conflict` callouts as unresolved: report both claims. Treat `#inferred` callouts as the wiki's own reasoning, not as source statements.
 
 Because every claim here carries its source and page, you can check an answer by opening the page it cites — and the converted text in `raw/md/` carries `<!-- page N -->` markers, so you can go one step further to the original wording.
 
