@@ -12,7 +12,7 @@ pages: 182
 ingested: 2026-08-25
 status: draft
 tags: [htgr, triso, fuel-performance, graphite, accident-testing]
-updated: 2026-08-25
+updated: 2026-10-14
 ---
 
 # High Temperature Gas Cooled Reactor Fuels and Materials
@@ -31,23 +31,23 @@ updated: 2026-08-25
 
 ## Chapters ingested
 
+- [[Ch 01 — Introduction]] · pp.11–23
+- [[Ch 02 — Manufacture of TRISO Coated Particles]] · pp.23–34
+- [[Ch 03 — Manufacture of Spherical Fuels]] · pp.34–38
 - [[Ch 04 — QA-QC and Characterization]] · pp.38–47
 - [[Ch 05 — Fabrication of Fuel Compacts]] · pp.47–57
 - [[Ch 06 — In-Core Structural Materials and Components]] · pp.57–61
 - [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] · pp.61–70
 - [[Ch 08 — Fuel Failure Mechanisms]] · pp.70–78
 - [[Ch 09 — Accident Testing]] · pp.78–93
+- [[Ch 11 — Particle Modeling]] · pp.106–110
+- [[Ch 12 — Fission Product Transport Modeling]] · pp.110–143
 
 ## Chapters not yet ingested
 
 | Ch | Title | Pages |
 |---|---|---|
-| 1 | Introduction (HTGR technology, fuels for HTGRs) | 11–23 |
-| 2 | Manufacture of TRISO coated particles | 23–34 |
-| 3 | Manufacture of spherical fuels | 34–38 |
 | 10 | Fuel chemistry | 93–106 |
-| 11 | Particle modeling | 106–110 |
-| 12 | Fission product transport modeling | 110–143 |
 | 13 | HTGR fuel cycles | 143–148 |
 | 14 | Spent HTGR fuel management | 148–161 |
 | — | Annex I — Nuclear hydrogen production | 161–168 |

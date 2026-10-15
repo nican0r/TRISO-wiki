@@ -2,7 +2,7 @@
 type: concept
 title: TRISO Fuel Failure Mechanisms
 status: draft
-sources: 3
+sources: 4
 tags: [triso, fuel-performance, failure-mechanisms, fabrication]
 updated: 2026-10-14
 ---
@@ -39,6 +39,10 @@ Three defective-SiC particles in roughly 20,000 across five compacts, with no �
 The eleven mechanisms above all originate inside the particle or in its coating. [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] records one that does not: **transition metals attack SiC.** Metal sleeves have historically not been permitted to touch fuel elements in irradiation capsules because Fe, Cr and Ni were observed to attack the SiC layer; transport and corrosion rates remain unquantified, and 2–3 mm of graphite between fuel and any metallic component is the accepted mitigation (p.64).
 
 This is a test-rig constraint in context, but the chemistry is not confined to test rigs — it bears on any in-core design in which metallic components sit near fuel, and it is part of why [[Ch 06 — In-Core Structural Materials and Components]] names ceramic composites rather than metals for control rod guide tubes and sheathing (p.61).
+
+## Why failure is a distribution, not a threshold
+
+Particles do not fail at one burnup. The layers are brittle, so fracture stress varies particle to particle, and the particles vary in geometry and properties, so the failed fraction grows as stress rises rather than switching at a point. Population failure fractions are therefore computed by Monte Carlo over sampled particle specifications ([[Ch 11 — Particle Modeling]] pp.108–109), which is the modelling counterpart to the measured fractions below.
 
 ## How the dominant cause is measured
 

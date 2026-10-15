@@ -2,7 +2,7 @@
 type: concept
 title: Fission Product Retention
 status: draft
-sources: 2
+sources: 3
 tags: [triso, fission-product-release, sic, accident-testing]
 updated: 2026-10-14
 ---
@@ -26,6 +26,10 @@ The 1600 °C threshold is the accident limit. The **highest normal operating fue
 ## What escapes regardless
 
 About **10⁻⁵ of an element's uranium sits outside the SiC boundary by construction**: uranium trapped in the coating layers during coating ("tramp" uranium) plus impurities in the matrix material and in the PyC source material ([[Ch 01 — Introduction]] p.22). The modern manufactured defect fraction is the same order, below 10⁻⁵ ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.23). Retention is therefore never total, and the floor is set in the factory — which is what [[Ch 09 — Accident Testing]] means when it attributes release to as-manufactured defects and heavy metal contamination rather than to in-service mechanisms.
+
+## How release is modelled
+
+Source-term models split release into three independent origins with different path lengths: uranium and thorium contamination in the OPyC and matrix; defective and failed particles, assumed to offer no coating resistance; and intact particles, where everything must cross every layer ([[Ch 12 — Fission Product Transport Modeling]] p.114). For gases the last route is closed by assumption — the diffusion coefficient through PyC is ~2 × 10⁻¹⁸ m²/s, so gaseous release from intact particles is ignored (p.128). Metals are modelled as Fickian diffusion in series, with the chapter conceding that transport of Cs, Ag, Sr and Eu "is undoubtedly much more complicated than classical Fickian diffusion" (p.116).
 
 ## Measured, in irradiated fuel
 

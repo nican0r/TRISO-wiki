@@ -11,7 +11,7 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 
 ## Sources
 
-- [[High Temperature Gas Cooled Reactor Fuels and Materials]] — IAEA-TECDOC-1645-CD (2010), 182 pp. Consolidated handbook on coated particle fuel technology; 9 of 14 chapters ingested — `draft`
+- [[High Temperature Gas Cooled Reactor Fuels and Materials]] — IAEA-TECDOC-1645-CD (2010), 182 pp. Consolidated handbook on coated particle fuel technology; 11 of 14 chapters ingested — `draft`
   - [[Ch 01 — Introduction]] — pp.11–23. Three temperature limits; passive decay heat removal; layer functions; UCO and advanced kernels — `draft`
   - [[Ch 02 — Manufacture of TRISO Coated Particles]] — pp.23–34. Sol-gel kernel routes and the reference CVD (chemical vapour deposition) coating process — `draft`
   - [[Ch 03 — Manufacture of Spherical Fuels]] — pp.34–38. Matrix formulation, overcoating, pressing; compared against compact fabrication — `draft`
@@ -21,6 +21,8 @@ Catalog of every page in the wiki. Read this first when answering a question, th
   - [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] — pp.61–70. Qualification method: acceleration limits, capsule design, R/B (release-to-birth ratio) monitoring, sample size — `draft`
   - [[Ch 08 — Fuel Failure Mechanisms]] — pp.70–78. Eleven TRISO failure mechanisms and the fabrication parameters that control them — `draft`
   - [[Ch 09 — Accident Testing]] — pp.78–93. KÜFA (Cold Finger Apparatus) heating tests; the 1600 °C threshold and its coupling to burnup — `draft`
+  - [[Ch 11 — Particle Modeling]] — pp.106–110. Layer stresses over irradiation; PyC as anisotropic crystallites; failure fractions by Monte Carlo — `draft`
+  - [[Ch 12 — Fission Product Transport Modeling]] — pp.110–143. Three release sources; diffusion and sorption modelling; prismatic temperature maps; uncertainty methods — `draft`
 - [[Spouted Bed Design Considerations for Coated Nuclear Fuel Particles]] — Marshall, INL/CON-15-36799 (2017), 10 pp. Spouted-bed CVD reactor design: criticality-constrained retort geometry, gas distributor nozzle, curvilinear converging section, soot-inclusion defect — `draft`
 - [[Preparation of the Coated Nuclear Fuel Particle Using the FB-CVD Method]] — Liu et al., INET Tsinghua, Procedia Eng. (2015), 6 pp. Axially non-uniform furnace heating to keep deposition off the nozzle; multi-ring inclined-hole gas distributor; per-layer coating parameters from 3 kg batches — `draft`
 - [[A Review on Properties Required for FB-CVD Fabricated SiC for TRISO Fuel Production]] — Hu et al., Univ. of Manchester, Prog. Nucl. Energy (2025), 19 pp. Review of 16 coater studies: 1500–1600 °C stoichiometric window, argon lowers it, H₂/MTS effect contested, compiled density/rate/efficiency data — `draft`
@@ -65,5 +67,5 @@ Catalog of every page in the wiki. Read this first when answering a question, th
 
 ## Questions
 
-- [[How are fuel compacts irradiated in qualification testing]] — capsule process, acceleration limits and spectrum selection; intra-compact flux distribution identified as a gap · 1 source — `draft`
-- [[Why does the inner PyC layer shrink during irradiation]] — macroscopic shrink-then-swell behaviour and its structural role; the crystallite-level mechanism is not in the ingested sources · 2 sources — `draft`
+- [[How are fuel compacts irradiated in qualification testing]] — capsule process, acceleration limits and spectrum selection; intra-element temperature gradients now in, flux and burnup spread still a gap · 2 sources — `draft`
+- [[Why does the inner PyC layer shrink during irradiation]] — crystallite anisotropy as the mechanism, creep as the bound, the observed failure chain; the dimensional-change coefficients are still missing · 5 sources — `draft`

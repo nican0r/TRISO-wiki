@@ -2,7 +2,7 @@
 type: concept
 title: TRISO Particle Architecture
 status: draft
-sources: 6
+sources: 7
 tags: [triso, sic, pyc, buffer, particle-design]
 updated: 2026-10-14
 ---
@@ -27,7 +27,9 @@ A second reference design — a US HEU (highly-enriched uranium)-licensed produc
 
 ## Why the layering works
 
-The SiC is the containment, but it is not self-supporting against the pressure it must hold. The pyrocarbon layers on either side of it shrink under irradiation, and where they are well bonded that shrinkage supplies compressive prestress that offsets the tensile load from fission gas and CO inside ([[Ch 01 — Introduction]] p.18, [[Ch 08 — Fuel Failure Mechanisms]] p.71). The architecture is therefore only as good as the PyC's isotropy and the PyC–SiC interface strength — which is why the acceptance criteria in [[Ch 02 — Manufacture of TRISO Coated Particles]] p.34 name impermeable, isotropic PyC and "sufficient strength" at the interfaces, and why the failures in [[Ch 08 — Fuel Failure Mechanisms]] cluster on exactly those two properties.
+The SiC is the containment, but it is not self-supporting against the pressure it must hold. The pyrocarbon layers on either side of it shrink under irradiation, and where they are well bonded that shrinkage supplies compressive prestress that offsets the tensile load from fission gas and CO inside ([[Ch 01 — Introduction]] p.18, [[Ch 08 — Fuel Failure Mechanisms]] p.71). Modelling puts numbers on that: in a worked example the SiC starts at roughly −330 MPa compressive, crosses into tension near 8 % burnup as gas pressure accumulates, and reaches its 650 MPa fracture stress near 13 % ([[Ch 11 — Particle Modeling]] p.109, Fig. 59, read off the plot). The shrinkage driving that prestress settles into a quasi-equilibrium against irradiation creep rather than growing without limit (p.107).
+
+The architecture is therefore only as good as the PyC's isotropy and the PyC–SiC interface strength — which is why the acceptance criteria in [[Ch 02 — Manufacture of TRISO Coated Particles]] p.34 name impermeable, isotropic PyC and "sufficient strength" at the interfaces, and why the failures in [[Ch 08 — Fuel Failure Mechanisms]] cluster on exactly those two properties.
 
 The IPyC (inner pyrocarbon)'s chlorine function is a fabrication artefact made permanent: SiC is deposited by decomposing CH₃SiCl₃, which liberates HCl ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.31), and the IPyC is what stops that reaching the kernel during coating. How well it does so is itself a deposition parameter: uranium dispersion after chlorination rises about twentyfold from an IPyC deposited at 1170 °C to one at 1325 °C ([[Effects of Deposition Conditions on the Properties of Pyrolytic Carbon Deposited in a Fluidized Bed|Lowden et al. 2005]] p.34) — [[PyC Layer Deposition]].
 

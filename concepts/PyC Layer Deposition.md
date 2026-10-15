@@ -2,7 +2,7 @@
 type: concept
 title: PyC Layer Deposition
 status: draft
-sources: 5
+sources: 6
 tags: [triso, pyc, ipyc, opyc, buffer, cvd, density, anisotropy, porosity, permeability, conflict]
 updated: 2026-10-14
 ---
@@ -18,6 +18,10 @@ Layer functions: [[TRISO Particle Architecture]]. Place in the sequence: [[TRISO
 $\text{C}_2\text{H}_2 \rightarrow 2\text{C} + \text{H}_2$ and $\text{C}_3\text{H}_6 \rightarrow 3\text{C} + 3\text{H}_2$, in argon ([[Ch 02 — Manufacture of TRISO Coated Particles]] p.33). The buffer is deposited from acetylene at high coating gas fraction to give a porous, ~1.0 g/cm³ layer; the dense layers use a propylene/acetylene mixture, or propylene alone, at lower fraction (p.31; [[TRISO Coating Parameters]]).
 
 **Coating gas fraction (CGF)** — the reactive fraction of the total gas flow — is the controlling variable alongside temperature, and is reported directly by the US lines while the German and INET lines give only gas identities.
+
+## Why anisotropy is physical, not conventional
+
+PyC is "a collection of imperfect graphite crystallites whose properties are highly anisotropic", and the layers must be deposited with those crystallites randomly oriented "to avoid shrinkage rates in the tangential direction being so large that they cause fracture" ([[Ch 11 — Particle Modeling]] p.109). Deposition sets the orientation distribution; orientation sets the irradiation shrinkage; shrinkage sets whether the layer cracks. See [[Why does the inner PyC layer shrink during irradiation]].
 
 ## What each parameter controls
 

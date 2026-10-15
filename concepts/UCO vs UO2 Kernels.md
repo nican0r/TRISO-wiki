@@ -2,9 +2,9 @@
 type: concept
 title: UCO vs UO2 Kernels
 status: draft
-sources: 1
+sources: 2
 tags: [uco, uo2, kernels, burnup, co, kernel-migration]
-updated: 2026-08-25
+updated: 2026-10-14
 ---
 
 # UCO vs UO₂ Kernels
@@ -45,6 +45,10 @@ From [[Ch 02 — Manufacture of TRISO Coated Particles]] pp.26–30. UCO is a ma
 The stated motivation for UCO is achieving higher operating temperature *and* increased discharge burnup for better uranium utilisation at the same time ([[Ch 01 — Introduction]] p.22). Both goals push against the same constraints — [[Ch 09 — Accident Testing]] couples the allowable accident temperature to burnup, requiring ≤1600 °C at 15% FIMA — and the CO chain is a large part of why. A design targeting high burnup with UO₂ kernels is accepting overpressure, kernel migration and SiC corrosion as burnup rises; the same design with UCO is not.
 
 Note that the accident-testing evidence base in [[Ch 09 — Accident Testing]] is almost entirely **LEU (low-enriched uranium) UO₂** TRISO, with the highest-burnup element tested at 10.2% FIMA. The argument for UCO at high burnup is mechanistic, and the irradiation data supporting it (US Advanced Gas Reactor (AGR) programme, HRB series) sits in chapters not yet ingested.
+
+## What the pressure costs
+
+Modelled internal pressure in a UO₂ LTI (low-temperature isotropic) TRISO reference particle at 10 % FIMA (fissions per initial metal atom): 4.0 MPa total at 900 °C, of which CO is 0.1; 21.5 MPa at 1200 °C, of which CO is 5.8 ([[Ch 11 — Particle Modeling]] Table 14, p.110). A 300 °C rise multiplies the load on the SiC more than fivefold, and turns CO from negligible into a quarter of it — the quantitative case for the kernel chemistry on this page.
 
 ## Sources
 

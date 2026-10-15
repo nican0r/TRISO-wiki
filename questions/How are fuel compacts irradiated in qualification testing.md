@@ -2,10 +2,10 @@
 type: question
 title: How are fuel compacts irradiated in qualification testing
 status: draft
-sources: 1
+sources: 2
 tags: [irradiation-testing, qualification, neutron-flux, acceleration, agr]
 asked: 2026-08-25
-updated: 2026-08-25
+updated: 2026-10-14
 ---
 
 # How are fuel compacts irradiated in qualification testing?
@@ -105,24 +105,27 @@ The two errors are distinct. A too-thermal spectrum under-delivers fast fluence,
 
 ### What is missing
 
-The ingested chapters say nothing about flux uniformity *inside* a compact. Specifically absent:
+Still absent: **flux and burnup distribution inside a compact.** No ingested source quotes self-shielding across the particle bed, radial or axial flux depression across a 13 × 51 mm compact, the burnup spread between particles in one compact, or an axial profile along the test train.
 
-- **Self-shielding within the particle bed.** A compact is a dispersion of ~500 µm high-density kernels in graphite at roughly 30% packing fraction ([[Ch 05 — Fabrication of Fuel Compacts]] p.48). Whether outer particles shadow inner ones, and by how much, is not discussed.
-- **Radial and axial flux depression across a compact.** Compacts are ~13 mm diameter × 51 mm long ([[Ch 01 — Introduction]] p.15) sitting in a 38 mm test position. No flux gradient across that dimension is quoted.
-- **Resulting burnup spread between particles in one compact.** Failure fractions are reported per compact lot as single numbers; the distribution of burnup across particles within a compact is not given.
-- **Axial flux profile along the test train.** Instrumentation is stated to exist at multiple locations, but no profile or peak-to-average figure appears.
+What has arrived since this was written is the thermal half of the same question, plus evidence that the spread matters:
 
-This matters because every failure mechanism in [[TRISO Fuel Failure Mechanisms]] is a function of local burnup, local fluence and local thermal gradient. A lot-average burnup of 10% FIMA with an undisclosed spread is a different statement from a uniform 10%.
+- **Temperature distributions within a compact and block** are modelled for a prismatic design: across the particle, through the compact matrix and hexagonal block, and against core height, with a local range of 761–1326 K inside one graphite column ([[Ch 12 — Fission Product Transport Modeling]] pp.140–141, Figs. 80–82). Modelled for an operating core, not for a test capsule — but it establishes that local conditions vary by hundreds of kelvin within an element.
+- **Per-particle variation is real and is routinely measured.** Every particle recovered from an AGR-1 compact is gamma-scanned, and its inventory normalised for "variation in fissionable material and burn-up" using its own ¹⁴⁴Ce or ¹³⁷Cs activity ([[PIE on Five Irradiated AGR-1 Compacts\|Hunn et al. 2012]] p.8). The spread is corrected for rather than reported.
+- **It has a visible consequence.** Silver retention varies from full inventory to below detection between particles in one compact, uncorrelated with any coating difference, and thermal history is the leading suspect — the report's own recommendation is single-particle furnace tests with varied thermal profiles (pp.4, 25).
+- **Failure fractions are distributions, by construction.** Particles do not fail at one burnup: brittle-layer fracture stress and particle geometry both vary, which is why population failure fractions come from Monte Carlo over sampled specifications ([[Ch 11 — Particle Modeling]] pp.108–109).
+
+So the wiki can now say that local conditions and outcomes vary within a compact, and that qualification handles this statistically. It still cannot say by how much the flux and burnup vary.
 
 ### What would close the gap
 
-- **AGR programme irradiation reports** (AGR-1, AGR-2 final reports, INL) — these carry as-run physics analyses with per-compact and often per-capsule burnup and fluence distributions. [[Ch 05 — Fabrication of Fuel Compacts]] points to the AGR-1 irradiation results, and [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] describes the capsule but not its as-run neutronics.
-- **Ch 11 (Particle Modeling)** and **Ch 12 (Fission Product Transport Modeling)** of this same document, pp.106–143, not yet ingested — Ch 12.6 covers a prismatic HTR-GT example including temperature maps, which may carry the intra-element gradient treatment.
+- **AGR-1 and AGR-2 as-run reports** (INL/EXT-10-18097 Rev. 3; INL/EXT-14-32277 Rev. 4), which carry as-run physics analyses with per-capsule and per-compact burnup and fluence. Both free from the INL digital library.
+- **ECAR-958 Rev. 2** (JMOCUP as-run daily depletion for AGR-1) and **ECAR-1682 Rev. 3** (individual compact fission product inventory and burnup), named on INL's own AGR-1 reference list — the per-compact depletion calculations themselves.
 - An ATR irradiation position characterisation, for the spectrum in the large B positions specifically.
 
 ---
 
 ## Sources
 
-- [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] · [[Ch 05 — Fabrication of Fuel Compacts]] · [[Ch 08 — Fuel Failure Mechanisms]] · [[Ch 01 — Introduction]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[Ch 07 — TRISO-Coated Particle Fuel Irradiations]] · [[Ch 05 — Fabrication of Fuel Compacts]] · [[Ch 08 — Fuel Failure Mechanisms]] · [[Ch 01 — Introduction]] · [[Ch 11 — Particle Modeling]] · [[Ch 12 — Fission Product Transport Modeling]] — from [[High Temperature Gas Cooled Reactor Fuels and Materials]]
+- [[PIE on Five Irradiated AGR-1 Compacts]]
 - Concept pages: [[Fuel Qualification Irradiation Testing]], [[Fuel Quality Control and Characterization]]
