@@ -2,7 +2,7 @@
 
 A reference wiki on high-temperature gas-cooled reactors and TRISO coated particle fuel, built page by page from primary literature: journal papers, IAEA documents, and INL/ORNL technical reports. It is written for lookup, not for reading end to end.
 
-Current contents: 10 ingested documents (one of them a 9-chapter handbook), 19 concept pages, 2 cross-source data tables, 2 answered questions, 59 figures, ~64,000 words. Start at [`index.md`](index.md) for the catalog, [`overview.md`](overview.md) for the synthesis, and [`log.md`](log.md) for what changed when.
+Start at [`index.md`](index.md) for the catalog, [`overview.md`](overview.md) for the synthesis, and [`log.md`](log.md) for what changed when.
 
 ## The rules that make it useful
 
@@ -42,16 +42,40 @@ It is plain Markdown — readable in any editor. For the links and figures to wo
 
 **The source PDFs are not in the repo.** `raw/pdf/` is gitignored — the originals are large and mostly copyrighted. Every page in `sources/` carries the document's title, report number or DOI, and a URL, so you can fetch the original yourself; most are free government reports. `raw/md/` holds the converted text, which is what page citations refer to.
 
+### Asking an LLM questions against the wiki
+
+The point of the citation rules is that an assistant reading this vault can be held to them. Three ways to wire one up, in increasing order of control:
+
+- **Inside Obsidian** — install the [Copilot](https://github.com/logancyang/obsidian-copilot) community plugin, add an API key for your provider (OpenRouter, Anthropic, OpenAI, Gemini, or any OpenAI-compatible or local model), let it index the vault, and use **Vault QA** mode, which answers from retrieved notes rather than from the model's own knowledge. After adding pages, re-run **Force Re-Index** from the command palette, and check **List Indexed Files** if an answer looks like it missed something.
+- **An external chat client** — the [MCP Vault Bridge](https://community.obsidian.md/plugins/mcp-vault-bridge) plugin exposes the vault read-only over MCP on `127.0.0.1` behind a bearer token, so Claude Desktop, LM Studio or any MCP client can search and read these pages directly. Note that a cloud model sees whatever it retrieves.
+- **An agent in the folder** — point Claude Code, Cowork or a similar coding agent at the clone. It reads `CLAUDE.md` on its own, which is how the wiki is maintained, and it can follow `[[wikilinks]]` and open `raw/md/` to check a citation against the converted source.
+
+Retrieval alone does not keep a model honest, so give it a standing instruction. Something like:
+
+> Answer only from the pages in this vault. Every number you give must carry the citation the page gives it, in the form `value ([[Source Title]] p.N)`. If the vault does not contain the answer, say so and name the page where it would belong — do not fill the gap from your own knowledge. Treat `#conflict` callouts as unresolved: report both claims. Treat `#inferred` callouts as the wiki's own reasoning, not as source statements.
+
+Because every claim here carries its source and page, you can check an answer by opening the page it cites — and the converted text in `raw/md/` carries `<!-- page N -->` markers, so you can go one step further to the original wording.
+
 ## Adding a source
 
-The converter needs Python 3 with `pdfplumber`, plus `pdftotext` and `pdftoppm` from Poppler (`brew install poppler` / `apt install poppler-utils`):
+**1. Put the document in `raw/`.** PDFs go in `raw/pdf/`, web clips (Obsidian Web Clipper markdown) go straight into `raw/web/`. Use a short descriptive filename — `review-of-sic-coating-properties.pdf`, not `1-s2.0-S014919702500160X-main.pdf`. Nothing else in `raw/` is ever edited by hand.
+
+Download the actual PDF, not the publisher's article page: a saved ScienceDirect or Springer page usually contains only the abstract, and the ingest will stall on it.
+
+**2. Convert it.** The converter needs Python 3 with `pdfplumber`, plus `pdftotext` and `pdftoppm` from Poppler (`brew install poppler` / `apt install poppler-utils`):
 
 ```bash
 python3 bin/pdf2md.py raw/pdf/<file>.pdf raw/md/
 ```
 
-It detects two-column layouts per page (`--two-col` / `--single-col` force it), extracts ruled tables, renders figure-bearing pages, and writes `<!-- page N -->` markers used for citations. It is lossy: equations and unruled tables degrade, so **read the original PDF alongside the conversion** and let the PDF win where they disagree.
+It detects two-column layouts per page (`--two-col` / `--single-col` force it when detection is wrong), extracts ruled tables, renders figure-bearing pages, and writes `<!-- page N -->` markers that citations refer to. It is lossy: equations and unruled tables degrade, so read the original PDF alongside the conversion and let the PDF win where they disagree. An agent working in the folder will normally run this step for you.
 
-Then follow the ingest workflow in `CLAUDE.md`: read the source end to end, bring the takeaways and every contradiction with an existing page before writing, then write the source page, update the concept and data pages it touches, cross-link both directions, add an `index.md` entry and a `log.md` line, and report the changelog. Commits are one per ingested source.
+**3. Ask the assistant to ingest it.** With an agent pointed at the clone (see above), the request is simply:
+
+> Ingest `raw/pdf/<file>.pdf` into the wiki, following the ingest workflow in CLAUDE.md.
+
+What should happen next, in order: it converts and reads the source end to end, opens the original PDF for figures and anything that converted badly, and then **comes back to you with 5–10 takeaways, what is new versus what the wiki already says, and every contradiction with an existing page — before writing anything.** That exchange is where you steer emphasis and decide whether a finding deserves its own page. If the assistant starts writing pages without it, stop it and ask for the takeaways first.
+
+Only then does it write, in one pass: the source page, new and updated concept and entity pages, any `data/` rows the source touches, figures copied into `assets/`, cross-links in both directions, an `index.md` entry and a `log.md` line — finishing with a changelog of every file it touched. Commit one source per commit.
 
 Citations use the PDF page markers from `raw/md/`, which can differ from the printed page numbers; where they do, each source page states the offset in its header.
